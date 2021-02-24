@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test SDK</title>
+    <!-- 
+        AXIOS - MANDATORY FOR SENDBIRD SDK 
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <!-- 
+        SENDBIRD SDK | MAKE SURE YOU HAVE THE LATEST ONE!! 
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sendbird/3.0.143/SendBird.min.js"></script>
+    <style>
+       .redCircle {
+           width: 10px;
+           height: 10px;
+           border-radius: 10px;
+           background-color: red;
+           display: none;
+       }
+       #onceConnected {
+           display: none;
+       }
+    </style>
+</head>
+
+<body>
+    <table align="center">
+        <tr>
+            <td>
+                <input type="text" id="userId" placeholder="User ID" />
+                <button onclick="connect()">
+                    Connect
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="onceConnected">
+                    <div id="userConnected"></div>
+                    <hr>
+                    <input type="text" id="message" placeholder="Message" />
+                    <button onclick="sendMessage()">
+                        Send Message
+                    </button>
+                    <hr>
+                    <div id="messages"></div>
+                    <div id="newMessageMark"></div>        
+                </div>
+            </td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>
